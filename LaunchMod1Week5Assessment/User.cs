@@ -12,26 +12,16 @@ namespace User
         public string Email { get; private set; }
         private string Password { get; set; }
         public bool IsLoggedIn { get; set; }
+        // made confirmation a property so it can be used in testing password creation
+        public string confirmation { get; set; }
 
         public User(string name, string email)
         {
             Name = name;
             Email = email;
             IsLoggedIn = false;
-        }
-
-        public bool IsSetupComplete()
-        {
-            if (Name != null && Email != null && Password != null)
-            {
-               return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
+        } 
+        // switched order of CreatePassword and IsSetupComplete
         public void CreatePassword(string email, string password)
         {
             if (email == Email)
@@ -41,7 +31,18 @@ namespace User
 
             if (Password != null)
             {
-                var confirmation = "Password Created";
+                confirmation = "Password Created";
+            }
+        }
+        public bool IsSetupComplete()
+        {
+            if (Name != null && Email != null && Password != null)
+            {
+               return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
