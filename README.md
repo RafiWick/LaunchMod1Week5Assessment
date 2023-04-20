@@ -2,23 +2,23 @@
 
 ## Questions (10 Points Possible)
 1. What would happen if you try to use a variable that is not in scope?
-
+When attempting to reference a variable that is not in scope you will get an error stating that the given variable does not exist in the given context and cannot be used.
 2. Describe the three As of a test:  
-A -   
-A -   
-A -   
+A -   Arrange - Setup the object nessesary to run the test on
+A -   Act     - run the method you want to test
+A -   Assert  - use Assert method to test the outcome of the Act for the given test
 
 3. What is the difference between `public` and `private` access modifiers?
-
+the public access modifier allow for the variable to be accessable from anywhere in the project. The private access modifier only allows for the variable to be accessed from within the class that it resides in, limmiting its scope to inturnal methods and considerations.
 4. A method should:  (**Select all that apply**) <br/>
-(A) Make changes to an object  
-(B) Return some information about an object  
+(A) Make changes to an object  <--
+(B) Return some information about an object  <-- 
 (C) Make changes to an object and return information about the object.  
 (D) None of the Above.  
 
 
 5. How did you determine what to answer for the question above?
-
+You need both command methods that change the object and query methods that return some information. Because of the importance of a method only having a single responsibility, a method that does both should not exist and instead be two seperate methods each doing one thing.
 ## Exercise (10 Points Possible)
 
 Clone your forked copy of this repository into Visual Studio.  
